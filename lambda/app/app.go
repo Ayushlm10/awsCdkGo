@@ -11,7 +11,7 @@ type App struct {
 
 func NewApp() App {
 	dbClient := database.NewDynamoDBClient()
-	apiHandler := api.NewApiHandler(*dbClient)
+	apiHandler := api.NewApiHandler(dbClient)
 	return App{
 		ApiHandler: apiHandler,
 	}
