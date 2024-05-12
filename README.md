@@ -39,3 +39,4 @@ A lambda function to register and login users will be deployed. This lambda func
 - `cdk diff` compare deployed stack with current state
 - `cdk synth` emits the synthesized CloudFormation template
 - `go test` run unit tests
+- `cdk destroy` to delete the stack.
