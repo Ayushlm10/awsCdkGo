@@ -54,6 +54,9 @@ func NewAwsGoStack(scope constructs.Construct, id string, props *AwsGoStackProps
 	loginResource := api.Root().AddResource(jsii.String("login"), nil)
 	loginResource.AddMethod(jsii.String("POST"), integration, nil)
 
+	protectedRoute := api.Root().AddResource(jsii.String("protected"), nil)
+	protectedRoute.AddMethod(jsii.String("GET"), integration, nil)
+
 	//give permision to lambda on the dynamodb table
 	table.GrantReadWriteData(myLambda)
 	return stack
